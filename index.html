@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my secret tunnel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="rgb-text">my secret tunnel</h1>
+        <p class="neon-sub">rgb multi-tool dashboard</p>
+
+        <div class="grid-layout">
+            <div class="app-card">
+                <h2>universal converter</h2>
+                <p>convert between all essential audio, video, image, and document formats instantly.</p>
+                
+                <input type="file" id="fileinput">
+                
+                <div class="input-group">
+                    <label for="formatselect">target format:</label>
+                    <select id="formatselect">
+                        <option value="wav">wav (audio)</option>
+                        <option value="mp3">mp3 (audio)</option>
+                        <option value="ogg">ogg (audio)</option>
+                        <option value="flac">flac (audio)</option>
+                        <option value="mp4">mp4 (video)</option>
+                        <option value="mkv">mkv (video)</option>
+                        <option value="mov">mov (video)</option>
+                        <option value="png">png (image)</option>
+                        <option value="jpg">jpg (image)</option>
+                        <option value="webp">webp (image)</option>
+                        <option value="pdf">pdf (document)</option>
+                        <option value="txt">txt (text)</option>
+                        <option value="md">md (markdown)</option>
+                    </select>
+                </div>
+
+                <button class="btn" onclick="convertfile()">convert & download</button>
+                <div id="converterstatus" class="status-msg"></div>
+            </div>
+
+            <div class="app-card">
+                <h2>rare seed generator</h2>
+                <p>locate insane terrain glitches, double mansions, and crater lakes.</p>
+                
+                <button class="btn" onclick="generateseed()">generate rare seed</button>
+                
+                <div id="seeddisplay" class="seed-box" style="display: none;">
+                    <div class="seed-num" id="seednum">00000000000000</div>
+                    <div class="seed-desc" id="seeddesc">seed description goes here...</div>
+                    <div class="seed-coords" id="seedcoords">coordinates: x: 0, z: 0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
